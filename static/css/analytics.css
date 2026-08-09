@@ -1,0 +1,480 @@
+/* =====================================================
+   BINBRAIN ANALYTICS
+===================================================== */
+
+.analytics-header {
+    background: linear-gradient(
+        135deg,
+        #064e3b,
+        #087443,
+        #18a66a
+    );
+
+    border-radius: 25px;
+    padding: 40px 45px;
+    color: white;
+    margin-bottom: 30px;
+
+    box-shadow: 0 20px 45px rgba(8,116,67,0.18);
+}
+
+.analytics-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #9af0bd;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.analytics-header h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.analytics-header p {
+    max-width: 720px;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+
+.analytics-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.analytics-stat-card {
+    background: white;
+    border: 1px solid #e4eee9;
+    border-radius: 20px;
+    padding: 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    box-shadow: 0 10px 30px rgba(15,74,48,0.06);
+
+    transition: 0.3s;
+}
+
+.analytics-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 35px rgba(15,74,48,0.1);
+}
+
+.analytics-stat-icon {
+    min-width: 55px;
+    width: 55px;
+    height: 55px;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.analytics-stat-icon.green {
+    background: #e1f8eb;
+    color: #18a66a;
+}
+
+.analytics-stat-icon.blue {
+    background: #e5f3ff;
+    color: #138bc5;
+}
+
+.analytics-stat-icon.orange {
+    background: #fff0e3;
+    color: #ec8a35;
+}
+
+.analytics-stat-icon.purple {
+    background: #eee7ff;
+    color: #7c55d7;
+}
+
+.analytics-stat-card span {
+    display: block;
+    color: #71847f;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.analytics-stat-card h2 {
+    margin: 3px 0;
+    color: #17352d;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.analytics-stat-card small {
+    color: #9aa8a3;
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.analytics-card {
+    background: white;
+    border: 1px solid #e4eee9;
+    border-radius: 22px;
+    padding: 28px;
+
+    box-shadow: 0 10px 30px rgba(15,74,48,0.06);
+}
+
+.card-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.card-heading h3 {
+    margin: 0 0 6px;
+    color: #17352d;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.card-heading p {
+    margin: 0;
+    color: #82918c;
+    font-size: 13px;
+}
+
+.card-heading > i {
+    width: 45px;
+    height: 45px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e1f8eb;
+    color: #18a66a;
+}
+
+
+/* =====================================================
+   WASTE BARS
+===================================================== */
+
+.waste-row {
+    margin-bottom: 23px;
+}
+
+.waste-row:last-child {
+    margin-bottom: 0;
+}
+
+.waste-row-title {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    color: #4d625a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.waste-row-title strong {
+    color: #17352d;
+}
+
+.progress {
+    height: 10px;
+    background: #edf4f0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.plastic-bar {
+    background: #18a66a;
+}
+
+.organic-bar {
+    background: #65b96f;
+}
+
+.paper-bar {
+    background: #138bc5;
+}
+
+.metal-bar {
+    background: #ec8a35;
+}
+
+
+/* =====================================================
+   ECO IMPACT
+===================================================== */
+
+.impact-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 16px;
+
+    background: #f7fbf9;
+
+    border-radius: 16px;
+
+    margin-bottom: 12px;
+}
+
+.impact-box:last-child {
+    margin-bottom: 0;
+}
+
+.impact-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 15px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.impact-box h2 {
+    margin: 0;
+    color: #17352d;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.impact-box p {
+    margin: 2px 0 0;
+    color: #82918c;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   ACTIVITY
+===================================================== */
+
+.activity-card {
+    margin-bottom: 25px;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #edf2ef;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-icon.green {
+    background: #e1f8eb;
+    color: #18a66a;
+}
+
+.activity-icon.orange {
+    background: #fff0e3;
+    color: #ec8a35;
+}
+
+.activity-icon.blue {
+    background: #e5f3ff;
+    color: #138bc5;
+}
+
+.activity-text {
+    flex: 1;
+}
+
+.activity-text strong {
+    display: block;
+    color: #17352d;
+    font-size: 14px;
+}
+
+.activity-text span {
+    display: block;
+    color: #82918c;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.activity-item > small {
+    color: #9aa8a3;
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   MOTIVATION
+===================================================== */
+
+.analytics-motivation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 25px 30px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #e7faef,
+        #f5fcf8
+    );
+
+    border: 1px solid #cceedd;
+
+    margin-bottom: 40px;
+}
+
+.motivation-icon {
+    width: 55px;
+    height: 55px;
+
+    min-width: 55px;
+
+    border-radius: 17px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+.analytics-motivation h3 {
+    color: #17352d;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.analytics-motivation p {
+    margin: 0;
+    color: #71847f;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .analytics-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-header {
+        padding: 30px;
+    }
+
+    .analytics-header h1 {
+        font-size: 32px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .analytics-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-header {
+        padding: 25px 20px;
+    }
+
+    .analytics-header h1 {
+        font-size: 27px;
+    }
+
+    .analytics-card {
+        padding: 20px;
+    }
+
+    .analytics-motivation {
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page_title">BINBRAIN | Smart Waste Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block extra_css %}{% endblock %}
+</head>
+<body class="app-body">
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="/"><span class="brand-mark">🌿</span><span>BINBRAIN</span></a>
+    <nav class="side-nav">
+      <a href="/dashboard" class="{{ 'active' if request.path == '/dashboard' else '' }}"><i class="fa-solid fa-house"></i><span data-i18n="dashboard">Dashboard</span></a>
+      <a href="/scanner" class="{{ 'active' if request.path == '/scanner' else '' }}"><i class="fa-solid fa-camera-retro"></i><span data-i18n="ai_scanner">AI Scanner</span></a>
+      <a href="/report" class="{{ 'active' if request.path == '/report' else '' }}"><i class="fa-solid fa-location-dot"></i><span data-i18n="report_garbage">Report Garbage</span></a>
+      <a href="/analytics" class="{{ 'active' if request.path == '/analytics' else '' }}"><i class="fa-solid fa-chart-column"></i><span data-i18n="analytics">Analytics</span></a>
+      <a href="/rewards" class="{{ 'active' if request.path == '/rewards' else '' }}"><i class="fa-solid fa-trophy"></i><span data-i18n="eco_rewards">Eco Rewards</span></a>
+    </nav>
+    <div class="sidebar-footer"><a href="/" ><i class="fa-solid fa-arrow-left"></i><span data-i18n="back_home">Back to Home</span></a><a href="/logout"><i class="fa-solid fa-right-from-bracket"></i><span data-i18n="logout">Logout</span></a></div>
+  </aside>
+  <main class="page-area">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu"><i class="fa-solid fa-bars"></i></button>
+      <div class="page-heading"><span class="eyebrow" data-i18n="brand_tagline">SMART WASTE INTELLIGENCE</span><h1>{% block page_heading %}BINBRAIN{% endblock %}</h1></div>
+      <div class="top-actions">
+        <select id="languageSelector" class="lang-select"><option value="en">🇬🇧 English</option><option value="te">🇮🇳 తెలుగు</option><option value="hi">🇮🇳 हिन्दी</option></select>
+        <button class="icon-btn"><i class="fa-regular fa-bell"></i></button>
+        <div class="user-chip"><div class="avatar">{{ (current_user.name or 'S')[:1]|upper }}</div><div><strong>{{ current_user.name or 'Satya' }}</strong><small data-i18n="eco_user">Eco User</small></div></div>
+      </div>
+    </header>
+    <div class="content-wrap">{% block content %}{% endblock %}</div>
+  </main>
+</div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% block extra_js %}{% endblock %}
+</body></html>

@@ -1,0 +1,467 @@
+/* =====================================================
+   BINBRAIN AI SCANNER
+===================================================== */
+
+.scanner-header {
+    background: linear-gradient(
+        135deg,
+        #064e3b,
+        #087443,
+        #18a66a
+    );
+
+    border-radius: 25px;
+    padding: 40px 45px;
+    color: white;
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 20px 45px rgba(8, 116, 67, 0.18);
+}
+
+.scanner-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: #9af0bd;
+    margin-bottom: 12px;
+}
+
+.scanner-header h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.scanner-header p {
+    max-width: 720px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =====================================================
+   SCANNER CARD
+===================================================== */
+
+.scanner-card {
+    background: white;
+    border-radius: 25px;
+    padding: 35px;
+
+    box-shadow:
+        0 12px 40px rgba(15, 74, 48, 0.08);
+
+    border: 1px solid #e4eee9;
+}
+
+
+/* =====================================================
+   UPLOAD
+===================================================== */
+
+.upload-area {
+    border: 2px dashed #9dddbb;
+    border-radius: 22px;
+
+    padding: 55px 25px;
+
+    text-align: center;
+
+    background: #f6fcf8;
+
+    transition: 0.3s;
+}
+
+.upload-area:hover {
+    border-color: #18a66a;
+    background: #eefaf3;
+}
+
+
+.upload-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 22px;
+
+    background: #dcf8e8;
+    color: #18a66a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+
+.upload-area h3 {
+    font-weight: 700;
+    color: #17352d;
+    margin-bottom: 8px;
+}
+
+
+.upload-area p {
+    color: #75877f;
+    margin-bottom: 22px;
+}
+
+
+.upload-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    background: #18a66a;
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.upload-btn:hover {
+    background: #087443;
+    transform: translateY(-2px);
+}
+
+
+.upload-area small {
+    display: block;
+    margin-top: 15px;
+    color: #9aa8a3;
+}
+
+
+/* =====================================================
+   IMAGE PREVIEW
+===================================================== */
+
+.preview-container {
+    display: none;
+
+    position: relative;
+
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+
+.preview-container img {
+    max-width: 100%;
+    max-height: 350px;
+
+    border-radius: 20px;
+
+    object-fit: contain;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.12);
+}
+
+
+.remove-image {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ef4444;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   SCAN BUTTON
+===================================================== */
+
+.scan-now-btn {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #18a66a,
+            #087443
+        );
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.scan-now-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(24,166,106,0.25);
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+.scan-result {
+    display: none;
+
+    align-items: center;
+    gap: 20px;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: #effaf4;
+
+    border: 1px solid #bcebd0;
+}
+
+
+.result-icon {
+    min-width: 65px;
+    height: 65px;
+
+    border-radius: 18px;
+
+    background: #18a66a;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.result-content > span {
+    color: #18a66a;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.result-content h3 {
+    margin: 5px 0;
+
+    font-size: 24px;
+    font-weight: 800;
+
+    color: #17352d;
+}
+
+
+.result-content p {
+    margin: 5px 0;
+    color: #687b73;
+}
+
+
+/* =====================================================
+   TIPS
+===================================================== */
+
+.scanner-tips {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 40px;
+}
+
+
+.tip-card {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    border: 1px solid #e4eee9;
+
+    box-shadow:
+        0 10px 30px rgba(15,74,48,0.05);
+
+    transition: 0.3s;
+}
+
+
+.tip-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 35px rgba(15,74,48,0.1);
+}
+
+
+.tip-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+.green-tip {
+    background: #e1f8eb;
+    color: #18a66a;
+}
+
+
+.blue-tip {
+    background: #e5f3ff;
+    color: #138bc5;
+}
+
+
+.orange-tip {
+    background: #fff0e3;
+    color: #ec8a35;
+}
+
+
+.tip-card h4 {
+    font-size: 17px;
+    font-weight: 700;
+
+    color: #17352d;
+
+    margin-bottom: 10px;
+}
+
+
+.tip-card p {
+    color: #75877f;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   LANGUAGE SELECTOR
+===================================================== */
+
+.dashboard-language-selector {
+    border: 1px solid #d9e9e1;
+
+    background: white;
+
+    color: #17352d;
+
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    font-family: Poppins, sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .scanner-header {
+        padding: 30px;
+    }
+
+    .scanner-header h1 {
+        font-size: 32px;
+    }
+
+    .scanner-tips {
+        grid-template-columns: 1fr;
+    }
+
+}
+@media (max-width: 576px) {
+
+    .scanner-card {
+        padding: 20px;
+    }
+
+    .scanner-header {
+        padding: 25px 20px;
+    }
+
+    .scanner-header h1 {
+        font-size: 27px;
+    }
+
+    .upload-area {
+        padding: 40px 15px;
+    }
+
+    .scan-result {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
